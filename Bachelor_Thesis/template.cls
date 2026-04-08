@@ -10,9 +10,6 @@
 
 \LoadClass{\@baseclass}
 
-% =========================
-% POPRAWIONE MARGINESY (DRUK)
-% =========================
 \RequirePackage[
   a4paper,
   inner=35mm,   % na oprawę
@@ -72,9 +69,7 @@
   \global\let\and\relax
 }
 
-% =========================
-% METADANE
-% =========================
+
 \def\nralbumu#1{\gdef\@nralbumu{#1}}
 \def\@nralbumu{???\ClassError{pracamgr}{Brak numeru albumu}\@ehc}
 
@@ -96,9 +91,7 @@
 \def\tytulang#1{\gdef\@tytulang{#1}}
 \def\@tytulang{???\ClassError{pracamgr}{Brak tytulu po angielsku}\@ehc}
 
-% =========================
-% ABSTRACT
-% =========================
+
 \renewenvironment{abstract}{%
   \titlepage
   \null\nobreak\vfil
@@ -122,15 +115,11 @@
   \centerline{\@tytulang\par}
   \nobreak\vfil\null\endtitlepage}
 
-% =========================
-% POPRAWNE CZYSTE STRONY
-% =========================
+
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
     \hbox{}\thispagestyle{empty}\newpage\fi\fi}
 
-% =========================
-% SPIS TREŚCI – BEZ ZMIAN
-% =========================
+
 \renewcommand*\@seccntformat[1]{\csname the#1\endcsname.\enspace}
 \def\numberline#1{\hb@xt@\@tempdima{#1.\hfil}}
 \renewcommand*\l@chapter[2]{%
